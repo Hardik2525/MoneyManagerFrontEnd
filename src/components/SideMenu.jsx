@@ -3,8 +3,8 @@ import MENU_ITEMS from "../util/MENU_ITEMS";
 
 const linkClass = (isActive) =>
     isActive
-        ? "flex items-center gap-3 px-3 py-3 w-full text-sm font-medium text-gray-800 dark:text-gray-100 bg-purple-50 dark:bg-purple-950 border-l-4 border-purple-800 rounded-md"
-        : "flex items-center gap-3 px-3 py-3 w-full text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-800 dark:hover:text-gray-100 rounded-md transition-colors";
+        ? "flex items-center gap-3 px-3 py-2.5 w-full text-sm font-medium text-white bg-purple-700 rounded-lg"
+        : "flex items-center gap-3 px-3 py-2.5 w-full text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors";
 
 const SideMenu = ({ sidebarVisible, onNavigate, activeMenu }) => {
     return (
@@ -20,14 +20,14 @@ const SideMenu = ({ sidebarVisible, onNavigate, activeMenu }) => {
 
             <aside
                 className={`
-                    fixed lg:static inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-900 border-r border-gray-200/80 dark:border-gray-700
+                    fixed lg:static inset-y-0 left-0 z-50 w-64 min-h-screen bg-white dark:bg-slate-900 border-r border-gray-200 dark:border-slate-800
                     flex flex-col pt-6 pb-8 px-4 shrink-0
                     transform transition-transform duration-200 ease-out
                     lg:translate-x-0
                     ${sidebarVisible ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
                 `}
             >
-                <h2 className="text-sm font-semibold leading-5 tracking-[-0.02em] uppercase mb-4 ml-3 text-gray-500 dark:text-gray-400">
+                <h2 className="text-xs font-semibold tracking-[0.14em] uppercase mb-4 px-3 text-gray-400">
                     Menu
                 </h2>
 

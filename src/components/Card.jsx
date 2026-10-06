@@ -1,6 +1,6 @@
 const Card = ({ title, action, children, className = "" }) => (
     <section
-        className={`bg-white dark:bg-gray-900 border border-gray-200/70 dark:border-gray-800 rounded-2xl shadow-sm p-5 sm:p-6 ${className}`}
+        className={`h-full flex flex-col bg-white dark:bg-slate-900 border border-gray-200/70 dark:border-slate-800 rounded-2xl shadow-sm p-5 sm:p-6 ${className}`}
     >
         {(title || action) && (
             <div className="flex items-center justify-between gap-4 mb-5">
@@ -10,7 +10,7 @@ const Card = ({ title, action, children, className = "" }) => (
                 {action}
             </div>
         )}
-        {children}
+        {children && <div className="flex-1">{children}</div>}
     </section>
 );
 

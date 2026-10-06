@@ -1,5 +1,5 @@
 const StatCard = ({ icon: Icon, label, value, color }) => (
-    <div className="flex items-center gap-5 bg-white dark:bg-gray-900 border border-gray-200/70 dark:border-gray-800 rounded-2xl shadow-sm p-5 sm:p-6">
+    <div className="h-full flex items-center gap-5 bg-white dark:bg-slate-900 border border-gray-200/70 dark:border-slate-800 rounded-2xl shadow-sm p-5 sm:p-6">
         <div className={`w-14 h-14 flex items-center justify-center rounded-full text-white shadow-lg ${color}`}>
             <Icon size={24} />
         </div>

@@ -77,8 +77,8 @@ const Home = () => {
 
     return (
         <Dashboard activeMenu="Dashboard">
-            <div className="max-w-6xl mx-auto space-y-6">
-                <div>
+            <div className="space-y-6">
+                <div className="text-center">
                     <h1 className="text-2xl sm:text-3xl font-semibold text-gray-800 dark:text-gray-100">
                         Welcome back{user?.fullName ? `, ${user.fullName.split(" ")[0]}` : ""} 👋
                     </h1>
@@ -87,7 +87,7 @@ const Home = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
                     <StatCard icon={WalletCards} label="Total Balance" value={formatCurrency(totalBalance)} color="bg-purple-700" />
                     <StatCard icon={Wallet} label="Total Income" value={formatCurrency(totalIncome)} color="bg-green-600" />
                     <StatCard icon={Coins} label="Total Expense" value={formatCurrency(totalExpense)} color="bg-red-600" />
@@ -97,7 +97,7 @@ const Home = () => {
                     <p className="text-sm text-gray-500 dark:text-gray-400">Loading your dashboard...</p>
                 ) : (
                     <>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
                             <Card title="Recent Transactions" action={<SeeAll to="/filter" />}>
                                 <TransactionList
                                     items={data?.recentTransactions}
@@ -121,7 +121,7 @@ const Home = () => {
                             </Card>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
                             <Card title="Recent Income" action={<SeeAll to="/income" />}>
                                 <TransactionList
                                     items={data?.recent5Incomes}

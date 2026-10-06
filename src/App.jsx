@@ -4,6 +4,7 @@ import { Toaster } from "react-hot-toast";
 import { LoaderCircle } from "lucide-react";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Landing from "./pages/Landing";
 
 const Home = lazy(() => import("./pages/Home"));
 const Category = lazy(() => import("./pages/Category"));
@@ -28,6 +29,7 @@ const App = () => {
       <Suspense fallback={<PageLoader />}>
       <Routes>
         <Route path="/" element={<Root />} />
+        <Route path="/home" element={<Landing />} />
         <Route path="/dashboard" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
@@ -47,7 +49,7 @@ const Root = () => {
   return isAuthenticated ? (
     <Navigate to="/dashboard" replace />
   ) : (
-    <Navigate to="/login" replace />
+    <Navigate to="/home" replace />
   );
 };
 

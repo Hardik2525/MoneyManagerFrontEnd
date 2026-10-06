@@ -10,7 +10,7 @@ const Dashboard = ({ children, activeMenu }) => {
     const closeSidebar = () => setSidebarVisible(false);
 
     return (
-        <div className="min-h-screen flex bg-gray-50 dark:bg-gray-950">
+        <div className="min-h-screen flex bg-gray-50 dark:bg-slate-950">
             <SideMenu
                 sidebarVisible={sidebarVisible}
                 onNavigate={closeSidebar}
@@ -22,7 +22,7 @@ const Dashboard = ({ children, activeMenu }) => {
                     isOpen={sidebarVisible}
                     setIsOpen={setSidebarVisible}
                 />
-                <main className="flex-1 p-4 sm:p-6">{children}</main>
+                <main className="flex-1 px-4 sm:px-7 py-6">{children}</main>
             </div>
         </div>
     );
